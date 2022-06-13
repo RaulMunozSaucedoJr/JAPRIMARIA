@@ -1,0 +1,54 @@
+/*Widhts Heights */
+@use '../../base/widths_heights/widths_heights'as wdt_hgt;
+/*Padding - Margins */
+@use '../../utilities/common/paddings/paddings'as pad;
+@use '../../utilities/common/margins/margins'as mar;
+/* display */
+@use '../../utilities/common/display/display'as display;
+/* Colors */
+@use '../../utilities/common/colors/colors'as color;
+/* Font properties */
+@use '../../utilities/common/font_properties/fonts'as font;
+@use '../../utilities/common/font_properties/_font_sizes.scss'as font_size;
+@use '../../utilities/common/font_properties/font_weights'as font_weight;
+@use '../../utilities/common/font_properties/font_alignment'as font_alignment;
+/* Mixins */
+@use '../../utilities/common/mixins/mixins'as *;
+
+
+.tab {
+    @include width_height(wdt_hgt.$w100, wdt_hgt.$hauto);
+    background-color: color.$white;
+    overflow: hidden;
+    border: color.$dark_green solid .2em;
+    border-bottom: none;
+
+    button.tablinks {
+        @include width_height(wdt_hgt.$w33, wdt_hgt.$hauto);
+        @include text(font.$Montserrat, font_size.$betwen, font_weight.$bolder, font_alignment.$center, color.$black);
+        background-color: color.$dark_orange;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 16px 16px;
+        transition: 0.3s;
+
+        &:hover {
+            border: color.$dark_orange solid .2em;
+            background-color: color.$white;
+        }
+    }
+
+    &+.active {
+        background-color: #ccc;
+    }
+
+}
+
+.tabcontent {
+    display: none;
+    padding: 12px 12px;
+    border-top: none;
+    border: color.$dark_green solid .2em;
+}

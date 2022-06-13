@@ -1,0 +1,54 @@
+/* //!RESET PROPERTIES FROM WEB-BROWERS */
+
+/* Reset */
+@use '../base/reset/reset';
+/* PSEUDOSELECTORS */
+@use '../base/pseudoselectors/pseudoselectors';
+/* TAG WEB-BROWSER */
+@use '../base/tags/tags';
+
+/*********************************************/
+/* //!Layout */
+
+/* Navbar */
+@use '../layout/navbar/navbar';
+/* Sidebar */
+@use '../layout/sidebar/sidebar';
+/* Header */
+@use '../layout/header/header';
+/* Footer */
+@use '../layout/footer/footer';
+
+/**********************************************/
+
+/* //!Components */
+
+/* Bootsrap Alerts */
+@use '../components/alerts/boostrap_alerts/alerts_boostrap';
+/*Progess Bar*/
+@use '../components/progress_bars/progress_bar';
+/* Buttons */
+@use '../components/buttons/radio_button/radio_buttons';
+@use '../components/buttons/checboxes/checkboxes';
+@use '../components/buttons/reset/reset_button';
+/* State buttons */
+@use '../components/buttons/enabled/enabled_button';
+@use '../components/buttons/disabled/disabled_button';
+/* Cards */
+@use '../components/cards/cards';
+/* Dropdowns */
+@use '../components/dropdowns/dropdowns';
+/* Modals */
+@use '../components/modals/modals';
+/* Tables */
+@use '../components/tables/tables';
+/* Tabs */
+@use '../components/tabs/tabs';
+/* Tooltips */
+@use '../components/tooltip/tooltips';
+/* Clases */
+@use '../utilities/common/clases/clases';
+/* Identifiers */
+@use '../utilities/common/identifiers/identifiers';
+/* //!Media queries */
+@use '../utilities/common/media_queries/media_queries';

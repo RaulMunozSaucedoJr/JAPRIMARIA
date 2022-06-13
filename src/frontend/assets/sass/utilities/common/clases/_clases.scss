@@ -1,0 +1,61 @@
+/*Widhts Heights */
+@use '../../../base/widths_heights/widths_heights'as wdt_hgt;
+/* Display */
+@use '../display/display'as display;
+/*Padding - Margins */
+@use '../../../utilities/common/paddings/paddings'as pad;
+@use '../../../utilities/common/margins/margins'as mar;
+/* Colors */
+@use '../../../utilities/common/colors/colors'as color;
+/* Font properties */
+@use '../../../utilities/common/font_properties/fonts'as font;
+@use '../../../utilities/common/font_properties/_font_sizes.scss'as font_size;
+@use '../../../utilities/common/font_properties/font_weights'as font_weight;
+@use '../../../utilities/common/font_properties/font_alignment'as font_alignment;
+/* Mixins */
+@use '../../../utilities/common/mixins/mixins'as *;
+
+
+/*HERE ARE THE REUSABLE CLASES */
+
+.valido {
+    border: color.$dark_green solid .2em;
+}
+
+.invalido {
+    border: color.$red solid .2em;
+}
+
+
+.invalid-feedback {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    color: color.$red;
+}
+
+.navbar-collapse {
+    margin-top: 1em;
+}
+
+.container_footer {
+
+    &_left {
+        @include center(display.$display_grid, display.$place_content_center);
+    }
+
+    &_center {
+        @include center(display.$display_grid, display.$place_content_center);
+    }
+
+    &_right {
+
+        @include center(display.$display_grid, display.$place_content_center);
+
+        &_inner {
+            h1 {
+                @include text(font.$Montserrat, font_size.$betwen, font_weight.$bolder, font_alignment.$left, color.$white);
+            }
+        }
+    }
+}

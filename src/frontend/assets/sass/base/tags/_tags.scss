@@ -1,0 +1,131 @@
+/*Widhts Heights */
+@use '../../base/widths_heights/widths_heights'as wdt_hgt;
+/*Padding - Margins */
+@use '../../utilities/common/paddings/paddings'as pad;
+@use '../../utilities/common/margins/margins'as mar;
+/* Colors */
+@use '../../utilities/common/colors/colors'as color;
+/* Font properties */
+@use '../../utilities/common/font_properties/fonts'as font;
+@use '../../utilities/common/font_properties/_font_sizes.scss'as font_size;
+@use '../../utilities/common/font_properties/font_weights'as font_weight;
+@use '../../utilities/common/font_properties/font_alignment'as font_alignment;
+/* Mixins */
+@use '../../utilities/common/mixins/mixins'as *;
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    @include width_height(wdt_hgt.$w100, wdt_hgt.$h100);
+    background-color: color.$background_grid;
+}
+
+nav {
+    @include width_height(wdt_hgt.$w100, wdt_hgt.$hauto);
+}
+
+header {
+    @include width_height(wdt_hgt.$vw100, wdt_hgt.$vh100);
+    overflow-x: hidden;
+}
+
+section {
+    @include width_height(wdt_hgt.$vw100, wdt_hgt.$vh100);
+    overflow-x: hidden;
+}
+
+footer {
+    @include width_height(wdt_hgt.$w100, wdt_hgt.$hauto);
+}
+
+/* FORM COMPONENTS */
+form {
+    @include padding(pad.$padding1);
+}
+
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="file"] {
+    @include width_height(wdt_hgt.$w100, wdt_hgt.$h40);
+    border: color.$black solid .1rem;
+    display: block;
+    background-color: color.$background_grid;
+    @include text(font.$Montserrat, font_size.$general, font_weight.$bolder, font_alignment.$left, color.$black);
+    transition: .3s ease all;
+    box-sizing: border-box;
+    outline: none !important;
+    border-radius: .5em;
+
+    &:focus {
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px transparent;
+        outline: 0 none;
+    }
+
+    &:hover {
+        &:focus {
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px transparent;
+            outline: 0 none;
+        }
+    }
+}
+
+
+/* BUTTONS */
+button,
+button[type="button"],
+button[type="reset"],
+button[type="submit"] {
+    @include width_height(wdt_hgt.$w100, wdt_hgt.$hauto);
+    @include text(font.$Montserrat, font_size.$betwen, font_weight.$bolder, font_alignment.$left, color.$black);
+    outline: none;
+    border: transparent;
+    border-radius: .3em;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    &:hover {
+        font-weight: bold;
+        ;
+        outline: 0 none;
+
+        &:focus {
+            outline: 0 none;
+
+        }
+    }
+}
+
+/* TABLE COMPONENT */
+
+table {
+    @include width_height(wdt_hgt.$w100, wdt_hgt.$h100);
+}
+
+/* LABEL ETIQUETTE */
+label {
+    margin-top: 1rem;
+    @include text(font.$Montserrat, font_size.$general, font_weight.$bolder, font_alignment.$left, color.$black);
+}
+
+a,
+a:link,
+a:visited,
+a:active {
+    font-weight: bold;
+}
+
+small {
+    @include text(font.$Montserrat, font_size.$small, font_weight.$bolder, font_alignment.$left, color.$black);
+}
+
+
+i {
+    color: inherit;
+}

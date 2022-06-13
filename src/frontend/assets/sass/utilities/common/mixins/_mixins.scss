@@ -1,0 +1,56 @@
+/*Set a width and height to any element*/
+@mixin width_height($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+/*Set backgrond-color to any element*/
+@mixin background_color($background) {
+    background-color: $background;
+}
+
+/*
+Set the next properties to different text of the site:
+1. Font family
+2. Font weight
+3. Text align
+4. Font size
+5. Color
+*/
+@mixin text($font_family, $font_size, $font_weight, $text_align, $color) {
+    font-family: $font_family;
+    font-weight: $font_weight;
+    text-align: $text_align;
+    font-size: $font_size;
+    color: $color;
+}
+
+/* Remove properties to text */
+@mixin text_without_properties($emphasis, $decoration, $outline, $cursor) {
+    text-emphasis: $emphasis;
+    text-decoration: $decoration;
+    outline: $outline;
+    cursor: $cursor;
+}
+
+//Add padding to any element
+@mixin padding($padding) {
+    padding: $padding;
+}
+
+//Add margin to any element
+@mixin margin($margin) {
+    margin: $margin;
+}
+
+//Add a pading and margin to any element
+@mixin padding_margin($margin, $padding) {
+    padding: $padding;
+    margin: $margin;
+}
+
+//Center any element
+@mixin center($display, $place_content) {
+    display: $display;
+    place-content: $place_content;
+}

@@ -1,0 +1,19 @@
+@media only screen and (max-width: 37.5em) {
+    
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        body {
+            background-color: inherit;
+        }
+    }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}

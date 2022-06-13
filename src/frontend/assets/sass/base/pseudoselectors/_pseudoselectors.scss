@@ -1,0 +1,28 @@
+@use '../../base/widths_heights/widths_heights'as wdt_hgt;
+/*Padding - Margins */
+@use '../../utilities/common/paddings/paddings'as pad;
+@use '../../utilities/common/margins/margins'as mar;
+/* Colors */
+@use '../../utilities/common/colors/colors'as color;
+/* Font properties */
+@use '../../utilities/common/font_properties/fonts'as font;
+@use '../../utilities/common/font_properties/_font_sizes.scss'as font_size;
+@use '../../utilities/common/font_properties/font_weights'as font_weight;
+@use '../../utilities/common/font_properties/font_alignment'as font_alignment;
+/* Mixins */
+@use '../../utilities/common/mixins/mixins'as *;
+
+::placeholder {
+    @include text(font.$Montserrat, font_size.$general, font_weight.$bolder, font_alignment.$left, color.$black);
+}
+
+::selection {
+    background-color: color.$dark_green;
+    color: color.$black;
+}
+
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit;
+}

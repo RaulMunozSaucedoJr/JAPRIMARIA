@@ -1,0 +1,6 @@
+@use '../../utilities/common/colors/colors'as color;
+
+
+.footer {
+    background-color: color.$dark_green;
+}
