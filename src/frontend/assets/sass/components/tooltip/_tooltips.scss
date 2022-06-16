@@ -18,5 +18,5 @@
     background-color: color.$dark_orange;
     box-shadow: 0px 0px 4px color.$black;
     opacity: 1 !important;
-    @include text(font.$Montserrat, font_size.$betwen, font_weight.$bolder, font_alignment.$left, color.$white);
+    @include text(font.$Montserrat, font_size.$small, font_weight.$bolder, font_alignment.$left, color.$white);
 }

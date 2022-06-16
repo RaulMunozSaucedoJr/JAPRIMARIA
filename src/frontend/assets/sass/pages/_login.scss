@@ -1,0 +1,97 @@
+@use '../base/widths_heights/widths_heights'as wdt_hgt;
+/* Display */
+@use '../utilities/common/display/display'as display;
+/*Padding - Margins */
+@use '../utilities/common/paddings/paddings'as pad;
+@use '../utilities/common/margins/margins'as mar;
+/* Colors */
+@use '../utilities/common/colors/colors'as color;
+/* Font properties */
+@use '../utilities/common/font_properties/fonts'as font;
+@use '../utilities/common/font_properties/font_sizes'as font_size;
+@use '../utilities/common/font_properties/font_weights'as font_weight;
+@use '../utilities/common/font_properties/font_alignment'as font_alignment;
+/* Mixins */
+@use '../utilities/common/mixins/mixins'as *;
+
+.container_login {
+    @include width_height(wdt_hgt.$vw100, wdt_hgt.$vh100);
+    background-color: color.$light_green;
+    overflow-x: hidden;
+
+    &_box {
+        @include width_height(wdt_hgt.$w50, wdt_hgt.$h50);
+        @include display(display.$display_grid, display.$place_content_center);
+        overflow: hidden;
+
+        &_image {
+            @include display(display.$display_grid, display.$place_content_center);
+            margin-top: 2em;
+
+            img {
+                width: 50rem;
+                height: auto;
+                object-fit: cover;
+                pointer-events: none;
+            }
+        }
+
+        &_texts {
+            @include display(display.$display_grid, display.$place_content_center);
+
+            h4 {
+                @include text(font.$Montserrat, font_size.$small, font_weight.$bolder, font_alignment.$center, color.$white);
+                padding-top: 1rem
+            }
+
+            h1 {
+                @include text(font.$Montserrat, font_size.$betwen, font_weight.$bolder, font_alignment.$center, color.$white);
+                padding-top: 1rem
+            }
+
+            h5 {
+                @include text(font.$Montserrat, font_size.$small, font_weight.$bolder, font_alignment.$center, color.$white);
+                padding-top: 1rem
+            }
+        }
+
+        &_form {
+            @include width_height(wdt_hgt.$w50, wdt_hgt.$h100);
+
+            label {
+                @include text(font.$Montserrat, font_size.$betwen, font_weight.$bolder, font_alignment.$left, color.$white);
+            }
+
+            small {
+                @include text(font.$Montserrat, font_size.$small, font_weight.$bolder, font_alignment.$left, color.$white);
+            }
+
+            i {
+                color: color.$dark_orange;
+            }
+
+            button {
+                @include text(font.$Montserrat, font_size.$general, font_weight.$bolder, font_alignment.$center, color.$white);
+
+                &:hover {
+                    @include text(font.$Montserrat, font_size.$general, font_weight.$bolder, font_alignment.$center, color.$white);
+                }
+            }
+
+            #usr_pss,
+            #pss {
+                @include text(font.$Montserrat, font_size.$small, font_weight.$bolder, font_alignment.$center, color.$white);
+                margin-top: 2em;
+                background-color: transparent;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+        }
+    }
+
+
+
+}

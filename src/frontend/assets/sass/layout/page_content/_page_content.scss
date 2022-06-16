@@ -12,16 +12,26 @@
 /* Mixins */
 @use '../../utilities/common/mixins/mixins'as *;
 
-.navbar {
+.page-content {
+    width: calc(100% - 20rem);
     background-color: color.$background_grid;
+    margin-left: 20rem;
+    transition: all 0.5s;
 
-    a{
-        @include text(font.$Montserrat, font_size.$general, font_weight.$bolder, font_alignment.$left, color.$dark_orange);
+    &.active {
+        width: 100%;
+        margin: 0;
     }
 
-    i {
-        color: color.$dark_orange!important;
-    }
+    @media (max-width: 768px) {
+        .page-content {
+            width: 100%;
+            margin: 0;
 
-    
+            &.active {
+                margin-left: 20rem;
+                width: calc(100% - 20rem);
+            }
+        }
+    }
 }

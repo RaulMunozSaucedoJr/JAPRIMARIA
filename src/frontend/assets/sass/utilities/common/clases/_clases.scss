@@ -18,6 +18,56 @@
 
 /*HERE ARE THE REUSABLE CLASES */
 
+.bottom-fixed {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: calc(100% - 20rem);
+    height: 4rem;
+    background-color: #D5D7DD;
+    z-index: 1030;
+    transition: all 0.5s;
+}
+
+.hr-white {
+    border-color: white;
+    width: 75%;
+    margin-top: 0.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.separar-cintillo {
+    width: 100%;
+    padding-bottom: 120px;
+}
+
+
+.band-sponsors {
+    background: #fff;
+    margin: auto;
+    width: 20rem;
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding-left: 1em;
+    padding-top: 5px;
+    transition: 0.5s;
+}
+
+.band-sponsors-resp {
+    background: #fff;
+    margin: auto;
+    width: 100%;
+    overflow: hidden;
+    /* position: fixed; */
+    left: 0;
+    bottom: 0;
+    padding-left: 1em;
+    padding-top: 5px;
+    transition: 0.5s;
+}
+
 .valido {
     border: color.$dark_green solid .2em;
 }
@@ -34,23 +84,20 @@
     color: color.$red;
 }
 
-.navbar-collapse {
-    margin-top: 1em;
-}
 
 .container_footer {
 
     &_left {
-        @include center(display.$display_grid, display.$place_content_center);
+        @include display(display.$display_grid, display.$place_content_center);
     }
 
     &_center {
-        @include center(display.$display_grid, display.$place_content_center);
+        @include display(display.$display_grid, display.$place_content_center);
     }
 
     &_right {
 
-        @include center(display.$display_grid, display.$place_content_center);
+        @include display(display.$display_grid, display.$place_content_center);
 
         &_inner {
             h1 {

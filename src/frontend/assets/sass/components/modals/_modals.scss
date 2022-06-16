@@ -47,8 +47,13 @@
         }
 
         button {
-            border: color.$dark_green solid .2em;
+            background-color: color.$dark_orange;
             @include text(font.$Montserrat, font_size.$general, font_weight.$bolder, font_alignment.$center, color.$black);
+
+            &:hover {
+                background-color: color.$dark_orange;
+                @include text(font.$Montserrat, font_size.$general, font_weight.$bolder, font_alignment.$center, color.$black);
+            }
         }
 
     }
@@ -57,8 +62,13 @@
         @include width_height(wdt_hgt.$w100, wdt_hgt.$hauto);
 
         button {
-            border: color.$dark_green solid .2em;
+            background-color: color.$dark_orange;
             @include text(font.$Montserrat, font_size.$general, font_weight.$bolder, font_alignment.$center, color.$black);
+
+            &:hover {
+                background-color: color.$dark_orange;
+                @include text(font.$Montserrat, font_size.$general, font_weight.$bolder, font_alignment.$center, color.$black);
+            }
         }
     }
 

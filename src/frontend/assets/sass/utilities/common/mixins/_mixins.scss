@@ -50,7 +50,7 @@ Set the next properties to different text of the site:
 }
 
 //Center any element
-@mixin center($display, $place_content) {
+@mixin display($display, $place_content) {
     display: $display;
     place-content: $place_content;
-}
+} 

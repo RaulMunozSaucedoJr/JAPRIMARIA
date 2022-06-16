@@ -1,6 +1,43 @@
+@use '../../base/widths_heights/widths_heights'as wdt_hgt;
+/*Padding - Margins */
+@use '../../utilities/common/paddings/paddings'as pad;
+@use '../../utilities/common/margins/margins'as mar;
+/* Display */
+@use '../../utilities/common/display/display'as display;
+/* Colors */
 @use '../../utilities/common/colors/colors'as color;
-
+/* Font properties */
+@use '../../utilities/common/font_properties/fonts'as font;
+@use '../../utilities/common/font_properties/font_sizes'as font_size;
+@use '../../utilities/common/font_properties/font_weights'as font_weight;
+@use '../../utilities/common/font_properties/font_alignment'as font_alignment;
+/* Mixins */
+@use '../../utilities/common/mixins/mixins'as *;
 
 .footer {
-    background-color: color.$dark_green;
+    @include width_height(wdt_hgt.$w100, wdt_hgt.$h100);
+    @include display(display.$display_grid, display.$place_content_center);
+    background-color: color.$background_grid;
+    margin-bottom: 2em;
+    &.active {
+        width: 100%;
+    }
+
+    img {
+        width: 10em;
+        height: auto;
+        pointer-events: none;
+    }
+
+    @media (max-width: 768px) {
+        .footer {
+            @include width_height(wdt_hgt.$w100, wdt_hgt.$h100);
+
+            img {
+                width: 20em;
+                height: auto;
+                pointer-events: none;
+            }
+        }
+    }
 }

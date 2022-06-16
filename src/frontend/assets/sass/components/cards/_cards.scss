@@ -18,7 +18,7 @@
 .card {
     @include width_height(wdt_hgt.$w100, wdt_hgt.$h100);
     background-color: color.$white;
-    margin-top: 4em;
+    margin-top: 1em;
     border-radius: .4em;
 
     &-header {
@@ -42,8 +42,8 @@
         }
 
         p {
-            @include text(font.$Montserrat, font_size.$general, font_weight.$bolder, font_alignment.$left, color.$black);
-            line-height: 2em;
+            @include text(font.$Montserrat, font_size.$small, font_weight.$lighter, font_alignment.$left, color.$black);
+
         }
 
         i {
@@ -61,7 +61,10 @@
 
     &-footer {
         @include width_height(wdt_hgt.$w100, wdt_hgt.$hauto);
+
+        @include display(display.$display_grid, display.$place_content_center);
         background-color: color.$white;
         border: none;
+
     }
 }

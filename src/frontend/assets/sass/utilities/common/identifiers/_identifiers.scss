@@ -17,5 +17,5 @@
 
 #main_card_container {
     @include width_height(wdt_hgt.$w100, wdt_hgt.$h100);
-    @include center(display.$display_grid, display.$place_content_center);
+    @include display(display.$display_grid, display.$place_content_center);
 }
